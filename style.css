@@ -97,7 +97,7 @@ body {
 .header {
   background-color: #000;
   color: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 10;
   height: 90px;
