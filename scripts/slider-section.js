@@ -268,7 +268,7 @@ function Slider () {
 
       console.log(endX);
 
-      if (endX >= 200) {
+      if (endX >= 150) {
         if (visibleNum === sliderPagesArr.length - 1) {
           visibleNum = 0;
         } else {
@@ -277,7 +277,7 @@ function Slider () {
 
         slider.jumpToPage();
         slider.switchingCircleActive(visibleNum);
-      } else if (endX <= -200) {
+      } else if (endX <= -150) {
         if (visibleNum === 0) {
           visibleNum = sliderPagesArr.length - 1;
         } else {
