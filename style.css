@@ -126,7 +126,7 @@ body {
 
 .logo {
   font-family: "Thinking_of_Betty";
-  font-size: 18px;
+  font-size: 18px !important;
   font-weight: 400;
   line-height: 20px;
   display: inline-block;
@@ -1027,6 +1027,7 @@ body.lock {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 40px;
+  width: 100%;
 }
 
 .contact__info {
@@ -1054,6 +1055,11 @@ body.lock {
   width: 80%;
 }
 
+.contact__form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
 .contact__form form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1100,5 +1106,110 @@ body.lock {
   }
 }
 /* End work style */
+/* Footer style */
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+.footer .container div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+}
+.footer a {
+  color: #fff;
+  font-weight: 300;
+}
+
+.footer__company {
+  color: #868686;
+  font-size: 12px;
+}
+.footer__company .logo {
+  margin: 0 0 30px;
+}
+
+.footer__pages,
+.footer__service,
+.footer__media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 20px;
+  margin: 30px 0 0;
+}
+.footer__pages h3,
+.footer__service h3,
+.footer__media h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer__pages,
+.footer__service {
+  margin-left: 25%;
+}
+.footer__pages ul,
+.footer__service ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.footer__media ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .footer .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .footer__pages,
+  .footer__service {
+    margin-left: 0;
+  }
+
+  .footer__media {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+
+  .footer__pages {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+}
+@media screen and (max-width: 550px) {
+  .footer__media ul {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+}
+/* End footer style */
 
 /*# sourceMappingURL=style.css.map */
