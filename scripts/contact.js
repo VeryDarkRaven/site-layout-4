@@ -20,3 +20,23 @@ function inputAndTextareaClick () {
 }
 
 inputAndTextareaClick();
+
+
+
+// Height textarea
+function textareaAutoSize () {
+  const contactBlock = document.querySelector(".contact");
+  const form = contactBlock.querySelector("form");
+  const textarea = form.querySelector("textarea");
+
+  textarea.addEventListener('input', autoSize);
+
+  function autoSize(){
+    setTimeout(function(){
+      textarea.style.cssText = 'height: auto;';
+      textarea.style.cssText = 'height:' + textarea.scrollHeight + 'px';
+    }, 0);
+  }
+}
+
+textareaAutoSize();
